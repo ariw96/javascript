@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The prompt() Method</h2>
+
+    <p>Click the button to ask for your favorite drink.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let result;
+            let answer = prompt('How many siblings do you have?', "your answer");
+            if (answer === 1) {
+                result = ("1 sibling");
+            }
+            if (answer > 1) {
+                result = ('More than 1 sibling')
+            } else {
+                result = ('no sibling')
+            }
+
+
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

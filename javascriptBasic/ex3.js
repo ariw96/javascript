@@ -1,9 +1,10 @@
-function describeCountry(country, population, capitalCity) {
-    console.log(
-        `${country} has ${population} million people and its capital city is ${capitalCity}`
-    );
+function describeCountry(name) {
+    let str = `my name is ${name}  `
+    console.log(`my name is ${name}  `);
+    console.log(str, str)
+
+
+
 }
 
-describeCountry("Israel", 9, "Delhi");
-describeCountry("usa", 320, "Washington dc");
-describeCountry("New Zeland", 50, "Critsecherche");
+describeCountry('ari');
