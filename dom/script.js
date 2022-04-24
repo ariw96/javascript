@@ -1,0 +1,10 @@
+let myList = document.querySelector('.start-here');
+myList.textContent = 'main title';
+const node = document.createElement("li");
+let textList = document.createTextNode('sub title 4');
+node.appendChild(textList);
+const subList = myList.nextElementSibling;
+subList.firstElementChild.appendChild(node);
+subList.nextElementSibling.remove();
+myList.parentElement.parentElement.previousElementSibling.lastElementChild.textContent = 'master of dom';
+myList.parentElement.nextElementSibling.firstElementChild.textContent = 'hello there';
