@@ -87,7 +87,16 @@ const ulParent = document.createElement('ul');
 for (let game of warriorsGames) {
     const { homeTeam, awayTeam } = game;
     const gameLi = document.createElement('li');
-    gameLi.innerText = `${homeTeam.team} ${homeTeam.points} : ${awayTeam.team} ${awayTeam.points}`;
+    const { team: homeTeamName, points: homeTeamPoints, isWinner: homeTeamIsWinner } = homeTeam;
+    const { team: awayTeamName, points: awayTeamPoints, isWinner: awayTeamIsWinner } = awayTeam;
+    const teamNames = `${awayTeamName} @ ${homeTeamName}`;
+    let scoreLine = `${awayTeamPoints}- ${homeTeamPoints}`;
+    if (homeTeamPoints > awayTeamPoints) {
+        scoreLine = `${awayTeamPoints}- <b>${homeTeamPoints}</b>`;
+    } else {
+        scoreLine = `<b>${awayTeamPoints}</b>- ${homeTeamPoints}`;
+    }
+    gameLi.innerHTML = `${teamNames} ${scoreLine}   `;
     ulParent.appendChild(gameLi);
 
 }
