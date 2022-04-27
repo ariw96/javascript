@@ -33,6 +33,7 @@ window.addEventListener("keypress", function(e) {
         div.style.color = "green";
         message.textContent = "you win";
         message.style.color = "green";
+
     } else {
         message.textContent = "wrong guess";
         message.style.color = "red";

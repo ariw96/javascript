@@ -21,7 +21,7 @@ body.appendChild(ul);
 ul.style.listStyle = "none";
 users.forEach(element => {
     const node = document.createElement("li");
-    // node.classList.add(`${element.id}`);
+    node.classList.add(`${element.id}`);
     var dataID = node.getAttribute('data-id');
 
     const text = document.createTextNode(`${element.firstName} ${element.lastName}`);
