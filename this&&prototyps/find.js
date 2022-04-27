@@ -1,20 +1,24 @@
 // The global variable
 let s = [23, 65, 98, 5];
 
-Array.prototype.myFilter = function(callback) {
+Array.prototype.myFind = function(callback) {
     // Only change code below this line
-    const newArray = [];
+    let result = undefined;
     for (let i = 0; i < this.length; i++) {
         if (callback(this[i])) {
-            newArray.push(this[i]);
+            result = this[i];
+            return result;
         }
+
     }
     // Only change code above this line
-    return newArray;
+
 };
 
 
-const new_s = s.myFilter(function(item) {
-    return item % 2 === 1;
+const new_s = s.myFind(function(item) {
+    if (item === 98) { // my find condition
+        return true;
+    }
 });
 console.log(new_s)
