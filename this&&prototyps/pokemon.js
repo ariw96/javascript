@@ -8,8 +8,8 @@ let pokemonName = "Pikachu";
 let pokemonType = "Electric";
 let pokemonAttackList = ["Thunder Shock", "Thunder Bolt", "Thunder Punch"];
 let objPokemon = new pokemon(pokemonName, pokemonType, pokemonAttackList);
-objPokemon.prototype.callPokemonName = function() {
-    // console.log(`i choose you ${this.name}`)
+pokemon.prototype.callPokemonName = function() {
+    console.log(`i choose you ${this.name}`)
 }
 
 pokemon.prototype.attack = function(i) {

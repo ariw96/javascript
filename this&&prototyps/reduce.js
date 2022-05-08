@@ -13,7 +13,7 @@ Array.prototype.myReduce = function(callback) {
 
 };
 const new_s = s.myReduce(function(accumulator, currentValue) {
-    accumulator = accumulator + currentValue // my find condition
+    accumulator = accumulator * currentValue // my find condition
     return accumulator;
 }, initialValue);
 console.log(new_s)
